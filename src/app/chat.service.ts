@@ -6,7 +6,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/share';
 
-const CHAT_URL = `ws://${window.location.host}/chat`;
+const CHAT_URL = 'chat';
 
 export interface Message {
     author: string;
@@ -25,7 +25,7 @@ export class ChatService {
     private hub;
 
     constructor(wsService: WebSocketService) {
-        this.hub = wsService.connect(CHAT_URL).share();
+        this.hub = wsService.connect(this.getChatUrl()).share();
 
         this.messages = this.hub
             .map((response: MessageEvent) => JSON.parse(response.data))
@@ -51,5 +51,16 @@ export class ChatService {
                 };
             });
 
+    }
+
+    private getChatUrl(){
+        let protocol = '';
+        if (window.location.protocol === 'https:') {
+            protocol = 'wss:';
+        } else {
+            protocol = 'ws:';
+        }
+
+        return `${protocol}//${window.location.host}/${CHAT_URL}`;
     }
 }
