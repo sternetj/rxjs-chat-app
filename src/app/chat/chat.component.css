@@ -1,0 +1,55 @@
+.talk-bubble:not(.isOwn) {
+    margin-right: 20px;
+}
+
+.talk-bubble.isOwn {
+    background-color: lightblue;
+    text-align: right;
+    margin-left: 20px;
+}
+
+.talk-bubble {
+    position: relative;
+    width: 200px;
+    height: auto;
+    background-color: lightgreen;
+    margin: 10px 0px 25px 0px;
+    padding: 5px;
+}
+
+.tri-right.btm-left:after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 0px;
+    right: auto;
+    top: auto;
+    bottom: -20px;
+    border: 22px solid;
+    border-color: transparent transparent transparent lightgreen;
+}
+
+.tri-right.btm-right:after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: auto;
+    right: 0px;
+    bottom: -20px;
+    border: 12px solid;
+    border-color: lightblue lightblue transparent transparent;
+}
+
+.talktext {
+    padding: 5px;
+    text-align: left;
+    line-height: 1.5em;
+}
+
+.talktext p {
+    /* remove webkit p margins */
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+}
