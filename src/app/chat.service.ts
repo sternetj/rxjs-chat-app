@@ -6,7 +6,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/share';
 
-const CHAT_URL = 'ws://localhost:3000/chat';
+const CHAT_URL = `ws://${window.location.host}/chat`;
 
 export interface Message {
     author: string;
