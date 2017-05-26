@@ -1,5 +1,8 @@
 input {
-    width: calc(100% - 10px);
-    padding: 5px;
+    flex-grow: 1;
+    padding: 8px;
     margin: 5px;
+}
+div {
+    display: flex;
 }
