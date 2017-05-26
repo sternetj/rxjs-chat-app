@@ -7,5 +7,6 @@ div {
     display: flex;
 }
 #submitButton {
-    display: none;
+    position: absolute;
+    visibility: hidden;
 }
