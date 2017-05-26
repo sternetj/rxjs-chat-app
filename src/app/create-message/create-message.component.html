@@ -1,11 +1,10 @@
 <form #sendMsg="ngForm" (ngSubmit)="onSubmit()" autocomplete="off" role="log">
-    <div class="input-group col-xs-8">
+    <div class="input-group">
         <input
             [(ngModel)]="message"
             (input)="userIsTyping()"
             (keypress.enter)="onSubmit()"
             name="message"
-            ngControl="msg"
             required
             type="text"
             class="form-control"
@@ -16,5 +15,12 @@
             aria-autocomplete="both"
             aria-haspopup="true"
             placeholder="enter a message...">
+        <input
+            id="submitButton"
+            name="submit"
+            type="submit"
+            class="form-control"
+            title="Send"
+            aria-label="Send">
     </div>
 </form>
