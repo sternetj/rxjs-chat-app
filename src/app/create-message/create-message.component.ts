@@ -34,12 +34,4 @@ export class CreateMessage {
             });
         }
     }
-
-    public focus() {
-        window.document.body.style.height = window.innerHeight + 'px';
-    }
-
-    public blur() {
-        window.document.body.style.height = '100vh';
-    }
 }
