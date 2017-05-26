@@ -4,6 +4,8 @@
             [(ngModel)]="message"
             (input)="userIsTyping()"
             (keypress.enter)="onSubmit()"
+            (focus)="focus()"
+            (blur)="blur()"
             name="message"
             required
             type="text"

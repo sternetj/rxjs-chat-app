@@ -14,7 +14,7 @@ export class CreateMessage {
 
     constructor(private chatService: ChatService) {}
 
-    private onSubmit() {
+    public onSubmit() {
         this.chatService.messages.next({
             author: UserService.userId,
             message: this.message
@@ -24,7 +24,7 @@ export class CreateMessage {
         this.userIsTyping();
     }
 
-    private userIsTyping() {
+    public userIsTyping() {
         const isTypingNow = this.message !== '';
         if (this.typing !== isTypingNow) {
             this.typing = isTypingNow;
@@ -33,5 +33,13 @@ export class CreateMessage {
                 isTyping: this.typing
             });
         }
+    }
+
+    public focus() {
+        window.document.body.style.height = window.innerHeight + 'px';
+    }
+
+    public blur() {
+        window.document.body.style.height = '100vh';
     }
 }
