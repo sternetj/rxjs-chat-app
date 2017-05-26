@@ -1,0 +1,9 @@
+<div *ngIf="show.length <= 3">
+    <div *ngFor="let msg of show;"
+         class="typingBubble"
+         [ngClass]="getClass(msg.author)"
+         title="user{{msg.author}} is typing">...</div>
+</div>
+<div *ngIf="show.length > 3">
+    <p>{{show.length}} users typing</p>
+</div>

@@ -1,1 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  max-height: 700px;
+  max-width: 479px;
+}
+
+.lightgreen {
+    background-color: lightgreen;
+    border-color: transparent transparent transparent lightgreen;
+}
+.lightpink{
+    background-color: lightpink;
+    border-color: transparent transparent transparent lightpink;
+}
+.lightsteelblue{
+    background-color: lightsteelblue;
+    border-color: transparent transparent transparent lightsteelblue;
+}
+.palevioletred {
+    background-color: palevioletred;
+    border-color: transparent transparent transparent palevioletred;
+}
+.lightseagreen{
+    background-color: lightseagreen;
+    border-color: transparent transparent transparent lightseagreen;
+}
+.palegoldenrod {
+    background-color: palegoldenrod;
+    border-color: transparent transparent transparent palegoldenrod;
+}
+.plum {
+    background-color: plum;
+    border-color: transparent transparent transparent plum;
+}
+.thistle {
+    background-color: thistle;
+    border-color: transparent transparent transparent thistle;
+}
+.salmon {
+    background-color: salmon;
+    border-color: transparent transparent transparent salmon;
+}

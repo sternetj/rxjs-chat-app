@@ -1,23 +1,12 @@
-import {ChatService, Message} from '../chat.service';
 import {Component, ElementRef} from '@angular/core';
 import {Subject} from 'rxjs/Subject';
-import { UserService } from "app/user.service";
+import {UserService, ChatService} from '../services';
+import {Message} from '../models';
 
 @Component({
     selector: 'chat',
     styleUrls: ['./chat.component.css'],
-    template: `
-        <div class="messages">
-            <div *ngFor="let msg of messages;"
-                 class="talk-bubble tri-right btm-right"
-                 [ngClass]="{'btm-right isOwn': isOwnUser(msg), 'btm-left': !isOwnUser(msg)}"
-                 title="user{{msg.author}}">
-                <div class="talktext">
-                    <p>{{ msg.message }}</p>
-                </div>
-            </div>
-        </div>
-    `,
+    templateUrl: './chat.component.html'
 })
 export class ChatComponent {
     public messages: Message[] = new Array();
@@ -28,7 +17,11 @@ export class ChatComponent {
         });
     }
 
-    public isOwnUser(message) {
-        return message.author === UserService.userId;
+    public isOwnUser(userId: string) {
+        return userId === UserService.userId;
+    }
+
+    public getClasses(userId: string) {
+        return UserService.getColorClass(userId) + (this.isOwnUser(userId) ? ' btm-right isOwn' : ' btm-left');
     }
 }

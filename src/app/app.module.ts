@@ -4,11 +4,10 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import {ChatService} from './chat.service';
-import {WebSocketService} from './websocket.service';
+import {ChatService, WebSocketService} from './services';
 import {ChatComponent} from './chat/chat.component';
-import {CreateMessage} from './create-message.component';
-import {TypingComponent} from './typing.component';
+import {CreateMessage} from './create-message/create-message.component';
+import {TypingComponent} from './typing/typing.component';
 
 @NgModule({
   declarations: [

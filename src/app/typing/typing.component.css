@@ -1,0 +1,11 @@
+.typingBubble {
+    margin: 0px 0px 0px 5px;
+    padding: 5px;
+    display: inline-block;
+}
+p {
+    color: gray;
+    font-style: italic;
+    font-size: 0.75em;
+    margin: 0px 0px 0px 5px;
+} 

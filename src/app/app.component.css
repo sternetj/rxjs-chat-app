@@ -1,0 +1,9 @@
+div > * {
+    flex: 0 1 auto;
+}
+.wrapper {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    background-color: #DDD;
+}

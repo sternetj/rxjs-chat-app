@@ -2,21 +2,12 @@ import {Injectable} from '@angular/core';
 import {Subject} from 'rxjs/Subject';
 import {Observable} from 'rxjs/Observable';
 import {WebSocketService} from './websocket.service';
+import {Message, UserTyping} from '../models';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/share';
 
 const CHAT_URL = 'chat';
-
-export interface Message {
-    author: string;
-    message: string;
-}
-
-export interface UserTyping {
-    author: string;
-    isTyping: boolean;
-}
 
 @Injectable()
 export class ChatService {

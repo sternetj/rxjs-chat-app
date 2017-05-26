@@ -1,3 +1,12 @@
+:host {
+    display: flex;
+    flex: 1 1 auto !important;
+    overflow: auto;
+    flex-direction: column-reverse
+}
+.messages {
+    width: 100%;
+}
 .talk-bubble:not(.isOwn) {
     margin-right: 20px;
 }
@@ -10,10 +19,8 @@
 
 .talk-bubble {
     position: relative;
-    width: 200px;
     height: auto;
-    background-color: lightgreen;
-    margin: 10px 0px 25px 0px;
+    margin: 10px 5px 25px 5px;
     padding: 5px;
 }
 
@@ -27,7 +34,7 @@
     top: auto;
     bottom: -20px;
     border: 22px solid;
-    border-color: transparent transparent transparent lightgreen;
+    border-color: inherit;
 }
 
 .tri-right.btm-right:after {
