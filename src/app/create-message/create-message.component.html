@@ -3,7 +3,7 @@
         <input
             [(ngModel)]="message"
             (input)="userIsTyping()"
-            (keypress.enter)="onSubmit()"
+            (keypress.enter)="$event.target.value && onSubmit()"
             name="message"
             required
             type="text"
@@ -15,12 +15,5 @@
             aria-autocomplete="both"
             aria-haspopup="true"
             placeholder="enter a message...">
-        <input
-            id="submitButton"
-            name="submit"
-            type="submit"
-            class="form-control"
-            title="Send"
-            aria-label="Send">
     </div>
 </form>

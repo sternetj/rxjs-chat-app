@@ -6,6 +6,3 @@ input {
 div {
     display: flex;
 }
-#submitButton {
-    flex: 0;
-}
